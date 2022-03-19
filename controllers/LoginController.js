@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken")
 const User = require("../models/User.js")
-const Account = require("../models/Account.js ")
+const Account = require("../models/Account.js")
 class LoginController {
   get(req, res) {
     res.render("authentication/login.hbs")

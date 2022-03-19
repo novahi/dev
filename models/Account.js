@@ -19,4 +19,4 @@ const Account = new mongoose.Schema({
   }
 })
 
-module.exports = connectAccount.models("account", Account)
+module.exports = mongoose.model("account", Account)

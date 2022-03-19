@@ -1,4 +1,4 @@
-$("#form").addEventLister("submit", async (e) => {
+$("#form").addEventListener("submit", async (e) => {
   try {
     e.preventDefault()
     e.stopPropagation()

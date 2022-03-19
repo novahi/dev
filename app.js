@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const handlebars = require("express-handlebar")
+const handlebars = require("express-handlebars")
 const db = require("./config/db");
 const route = require("./routes");
 const app = express();
@@ -24,12 +24,13 @@ app.engine("hbs", handlebars.engine({
 app.set("view engine", "handlebars");
 app.set("views", "./views")
 
-app.static()
-app.use("/public", express.static(path.join(__dirname, "public"))))
+app.use(express.static(path.join(__dirname, "public")))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 route(app);
 
 
-app.listen(PORT, () => db.connect(process.env.USER_URI, PORT))
+app.listen(PORT, async () => {
+  await db.connect(process.env.USER_URI, PORT)
+})
