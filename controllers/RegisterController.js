@@ -6,4 +6,4 @@ class RegisterController {
     
   }
 }
-module.export = new RegisterController()
+module.exports = new RegisterController()

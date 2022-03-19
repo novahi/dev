@@ -3,4 +3,4 @@ class homeController {
     res.render("home.hbs")
   }
 }
-module.export = new homeController()
+module.exports = new homeController()

@@ -11,4 +11,4 @@ function route(app) {
   app.use("/register", registerRouter);
   app.use("/", homeRouter)
 }
-module.exports = router;
+module.exports = route;

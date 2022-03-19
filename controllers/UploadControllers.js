@@ -3,4 +3,4 @@ class UploadController {
     res.render("tools/upload.hbs")
   }
 }
-module.export = new UploadController()
+module.exports = new UploadController()
