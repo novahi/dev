@@ -2,7 +2,7 @@ $("#form").addEventListener("submit", async (e) => {
   try {
     e.preventDefault()
     e.stopPropagation()
-    const login = await fetch("/", {
+    const login = await fetch("/login", {
       method: "POST",
       headers: {
         "Content-type": "application/json"

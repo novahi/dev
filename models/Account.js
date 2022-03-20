@@ -1,7 +1,11 @@
-require("dotenv").config();
-const db = require("../config/db/index.js");
-const connectAccount = db.connects(ACCOUNT_URI);
+require("dotenv").config()
 const mongoose = require("mongoose");
+// const connect = mongoose.createConnection(process.env.ACCOUNT_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// })
+const db = require("../config/db")
+const connect = db.connects(process.env.ACCOUNT_URI)
 const Account = new mongoose.Schema({
   email: {
     type: String,
@@ -19,4 +23,4 @@ const Account = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model("account", Account)
+module.exports = connect.model("account", Account)

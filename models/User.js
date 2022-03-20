@@ -1,4 +1,4 @@
-const mongoose = requrie("mongoose");
+const mongoose = require("mongoose");
 const username = require("mongoose-slug-generator");
 mongoose.plugin(username);
 const User = new mongoose.Schema({
@@ -24,4 +24,4 @@ const User = new mongoose.Schema({
 })
 
 
-module.exports = monsooge.model("user", User)
+module.exports = mongoose.model("user", User)

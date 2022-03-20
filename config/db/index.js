@@ -6,19 +6,16 @@ const options = {
 class Database {
   async connect(uri,port) {
     try {
+      const c = await mongoose.connect(uri, options)
       console.log(`Connection with Database Successfully!`)
-      console.log(`Server start on Port: ${port}`)
+      console.log(`http://localhost:${port}`)
+      return c
     } catch (error) {
       console.log(`Error: ${error}`)
     }
   }
-  async connects(uri) {
-    try {
-      return await mongoose.createConnection(uri, options)
-      console.log(`Connection with Database Successfully!`)
-    } catch (error) {
-      console.log(`Error: ${error}`)
-    }
+  connects(uri) {
+    return mongoose.createConnection(uri, options)
   }
 }
 

@@ -6,7 +6,7 @@ const db = require("./config/db");
 const route = require("./routes");
 const app = express();
 const cloudinary = require("cloudinary");
-
+const PORT = process.env.PORT || 3000
 require("dotenv").config()
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,

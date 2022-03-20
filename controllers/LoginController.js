@@ -11,6 +11,9 @@ class LoginController {
       email = email.toLowerCase()
       password = password.toLowerCase()
       const data = await Account.find({})
+      console.log(`email: ${email}
+      password: ${password}
+      data: ${data}`)
       data ? res.status(200).json({
         "status": true,
         "data": data
