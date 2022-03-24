@@ -3,7 +3,7 @@ $(".form").addEventListener("submit", async (e) => {
     e.preventDefault()
     e.stopPropagation()
     $("#message").textContent = "đang tải, nếu số lượng ảnh trong trang nhiều thì vui lòng đợi ít phút!"
-    const data = await fetch("/instagram", {
+    const data = await fetch("/tools/instagram", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

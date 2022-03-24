@@ -14,10 +14,10 @@
     "express-handlebars": "^6.0.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.7",
-    "mongoose-slug-generator": "^1.0.4"
+    "mongoose-slug-generator": "^1.0.4",
+    "puppeteer-core": "^13.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
   }
 }
- 

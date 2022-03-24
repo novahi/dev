@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const handlebars = require("express-handlebars")
+const { engine } = require("express-handlebars")
 const db = require("./config/db");
 const route = require("./routes");
 const app = express();
@@ -15,15 +15,11 @@ cloudinary.config({
 });
 
 // view engine setup
-app.engine("hbs", handlebars.engine({
-  extname: ".hbs",
-  helpers: {
-    // tool use with handlebars
-  }
+app.engine("hbs", engine({
+  extname: ".hbs"
 }))
 app.set("view engine", "handlebars");
-app.set("views", "./views")
-
+app.set("views", path.join(__dirname, "views"))
 app.use(express.static(path.join(__dirname, "public")))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

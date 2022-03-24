@@ -3,11 +3,10 @@ const Instagram = require("../util/instagram.js")
 const urlLogin = "https://www.instagram.com/accounts/login/?next=/login/"
 class ToolsController {
   getIG(req, res) {
-    return res.status(200).render("tools/instagrams")
+    return res.status(200).render("tools/instagram.hbs")
   }
   async postIG(req, res) {
    let { url } = req.body;
-   url = url.toLowercase();
    if(!url.includes("instagram.com/")) {
      return res.status(404).json({
        "status": false,
@@ -15,20 +14,20 @@ class ToolsController {
      })
    }
    const browser = await puppeteer.launch({
-     headless: true,
+     headless: false,
     // args: [
     //   "--no-sandbox",
     //   "--disable-setuid-sandbox"
     //   ],
-     userDataDir: "c:/Program Files (x86)/Google",
-       executablePath: "c:/Program Files/Google/Chrome/Application/chrome.exe"
+     userDataDir: process.env.DATA_DIR,
+     executablePath: process.env.CHORME_EXE
    })
    const page = await browser.newPage()
    await page.goto(url, {
      waitUntil: "networkidle0"
    })
    const isLogin = await page.evaluate(() => window.location.href) 
-   if(isLogin(urlLogin)) {
+   if(isLogin.includes(urlLogin)) {
      await Instagram.login(page)
      await page.goto(url, {
        waitUntil: "networkidle0"
@@ -43,7 +42,7 @@ class ToolsController {
        return e
      }
    })
-   await browser.close()
+  //  await browser.close()
    console.log(imgBase64)
   }
 }
