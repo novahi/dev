@@ -6,15 +6,15 @@ const options = {
 class Database {
   async connect(uri,port) {
     try {
-      const c = await mongoose.connect(uri, options)
-      console.log(`Connection with Database Successfully!`)
+      await mongoose.connect(uri, options)
+      console.log(`Connection User Database`)
       console.log(`http://localhost:${port}`)
-      return c
     } catch (error) {
       console.log(`Error: ${error}`)
     }
   }
   connects(uri) {
+    console.log(`Connect Account Database`)
     return mongoose.createConnection(uri, options)
   }
 }
