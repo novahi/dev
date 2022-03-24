@@ -51,7 +51,7 @@
 
 
 
-.btn {
+.button {
   appearance: button;
   background-color: #4D4AE8;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
@@ -77,34 +77,34 @@
   vertical-align: middle;
 }
 
-.btn:focus:not(:focus-visible),
-.btn:focus {
+.button:focus:not(:focus-visible),
+.button:focus {
   outline: 0;
 }
 
-.btn:hover {
+.button:hover {
   background-color: #3733E5;
   border-color: #3733E5;
 }
 
-.btn:focus {
+.button:focus {
   background-color: #413FC5;
   border-color: #3E3BBA;
   box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
 }
 
-.btn:active {
+.button:active {
   background-color: #3E3BBA;
   background-image: none;
   border-color: #3A38AE;
   box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
 }
 
-.btn:active:focus {
+.button:active:focus {
   box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
 }
 
-.btn:disabled {
+.button:disabled {
   background-image: none;
   box-shadow: none;
   opacity: .65;
@@ -149,7 +149,7 @@
     width: 7rem;
     height: 7rem;
   }
-  .btn {
+  .button {
     align-self: flex-end;
     margin-right: 3rem;
   }
@@ -190,7 +190,7 @@
 
 
 
-.btn {
+.button {
   appearance: button;
   background-color: #4D4AE8;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
@@ -216,34 +216,34 @@
   vertical-align: middle;
 }
 
-.btn:focus:not(:focus-visible),
-.btn:focus {
+.button:focus:not(:focus-visible),
+.button:focus {
   outline: 0;
 }
 
-.btn:hover {
+.button:hover {
   background-color: #3733E5;
   border-color: #3733E5;
 }
 
-.btn:focus {
+.button:focus {
   background-color: #413FC5;
   border-color: #3E3BBA;
   box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
 }
 
-.btn:active {
+.button:active {
   background-color: #3E3BBA;
   background-image: none;
   border-color: #3A38AE;
   box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
 }
 
-.btn:active:focus {
+.button:active:focus {
   box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
 }
 
-.btn:disabled {
+.button:disabled {
   background-image: none;
   box-shadow: none;
   opacity: .65;
@@ -288,7 +288,7 @@
     width: 7rem;
     height: 7rem;
   }
-  .btn {
+  .button {
     align-self: flex-end;
     margin-right: 3rem;
   }
