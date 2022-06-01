@@ -5,7 +5,7 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App ws={new WebSocket("wss://south-quilled-catfish.glitch.me")}/>
   </React.StrictMode>
 );
 
